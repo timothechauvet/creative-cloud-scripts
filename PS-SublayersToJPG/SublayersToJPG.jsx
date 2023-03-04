@@ -33,22 +33,30 @@ main();
 
 function main() {
     var folder = Folder.selectDialog("Choose a folder 👺");
-    if (!folder) return;
-    var files = folder.getFiles();
+    if (!folder) {
+        alert("No folder found");
+        return;
+    }
 
+    var files = folder.getFiles();
+    if(files.length < 1) {
+        alert("Folder is empty. Press OK to quit.");
+        return;
+    }
+    
     iterateFiles(files);
 }
 
 function iterateFiles(files) {
     for (var i = files.length - 1; i >= 0; i--) {
         var file = files[i];
-        if (!testFileExtension(file)) break;
+        if (!testFileExtension(file)) continue;
 
         try {
             var psd = app.open(file);
             magic(psd)
         } catch(e) {
-
+            alert(e);
         }
     }
 }
