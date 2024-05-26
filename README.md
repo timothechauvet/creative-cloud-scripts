@@ -24,7 +24,7 @@ For bugs, ideas or features requests, please submit an issue in this repository.
 - via Mastodon : https://h4.io/@timothechauvet
 - via LinkedIn : https://www.linkedin.com/in/timothechauvet/
 - via Twitter : https://twitter.com/timothechauvet
-- via Mail : timothe@chauvet.dev
+- via Mail : timothe@chauvet.cloud
 - or via an issue in this repository
 
 ## Donations 💸
